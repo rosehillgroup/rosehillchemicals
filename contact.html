@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Rosehill Chemicals</title>
+    <meta name="description" content="Contact Rosehill Chemicals for bespoke polymer solutions. Technical consultation forms, project enquiries, and direct contact with our expert team in West Yorkshire.">
+    <meta name="keywords" content="contact Rosehill Chemicals, technical consultation, project enquiry, polymer formulation, chemical expertise, West Yorkshire, UK manufacturing">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #1a365d, #2d4a71);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+        }
+
+        .nav-menu a.active {
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Page Header - Hero Style */
+        .page-header {
+            background: url('images/chemicals_hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(26, 54, 93, 0.2) 0%, 
+                rgba(26, 54, 93, 0.1) 50%,
+                rgba(26, 54, 93, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .page-header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 400px;
+        }
+
+        .page-header-content {
+            max-width: 700px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .page-header h1 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            color: #1A365D;
+        }
+
+        .page-header .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #4A5568;
+            line-height: 1.5;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'Overpass', sans-serif;
+            color: #1a365d;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ff6b35;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Contact Methods */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .contact-card h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.5rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-detail {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+
+        .contact-detail a {
+            color: #FF6B35;
+            text-decoration: none;
+        }
+
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
+
+        /* Forms Section */
+        .forms-section {
+            background: white;
+            padding: 60px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 60px 0;
+        }
+
+        .forms-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            position: relative;
+        }
+
+        .forms-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent 0%, #e1e5e9 20%, #e1e5e9 80%, transparent 100%);
+            transform: translateX(-50%);
+        }
+
+        .form-section h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.8rem;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+
+        .form-section p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a365d;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #FF6B35;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group.checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group.checkbox input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .form-group.checkbox label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Location Section */
+        .location-section {
+            background: #1a365d;
+            color: white;
+            padding: 60px 0;
+            margin: 60px 0;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .location-section h2 {
+            color: white;
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .location-info h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.5rem;
+            color: #FF6B35;
+            margin-bottom: 20px;
+        }
+
+        .location-info p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .location-map {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .location-map p {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        /* Team Contact */
+        .team-contact {
+            background: #f8f9fa;
+            padding: 60px 0;
+            border-radius: 15px;
+            margin: 60px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .team-member h4 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.2rem;
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+
+        .team-member .role {
+            color: #FF6B35;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-member p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a365d;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff6b35;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+
+            .forms-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .location-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="rosehill_chemicals_logo.png" alt="Rosehill Chemicals" />
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="process.html">Our Process</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="cta-button">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-container">
+            <div class="page-header-content">
+                <h1>Contact Our Team</h1>
+                <p class="subtitle">Ready to discuss your polymer formulation requirements? Get in touch with our technical experts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Contact Methods -->
+            <section class="section">
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Phone</h3>
+                        <p>Speak directly with our technical team for immediate assistance</p>
+                        <div class="contact-detail">
+                            <a href="tel:+441422839610">+44 (0) 1422 839 610</a>
+                        </div>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>Technical enquiries and project discussions</p>
+                        <div class="contact-detail">
+                            <a href="mailto:info@rosehillchemicals.com">info@rosehillchemicals.com</a>
+                        </div>
+                        <p>Typical response within 24 hours</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Visit Us</h3>
+                        <p>Our West Yorkshire facility welcomes technical visits</p>
+                        <div class="contact-detail">
+                            West Yorkshire, UK
+                        </div>
+                        <p>Arrange a visit to discuss your project</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forms Section -->
+            <section class="forms-section">
+                <div class="container">
+                    <h2 class="section-title">Project Enquiry Forms</h2>
+                    <div class="forms-container">
+                        <!-- Technical Consultation Form -->
+                        <div class="form-section">
+                            <h3>Technical Consultation</h3>
+                            <p>For bespoke formulation projects and technical discussions</p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="tech-name">Name *</label>
+                                    <input type="text" id="tech-name" name="tech-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tech-company">Company *</label>
+                                    <input type="text" id="tech-company" name="tech-company" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="tech-email">Email *</label>
+                                        <input type="email" id="tech-email" name="tech-email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tech-phone">Phone</label>
+                                        <input type="tel" id="tech-phone" name="tech-phone">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="application-type">Application Type *</label>
+                                    <select id="application-type" name="application-type" required>
+                                        <option value="">Select application type</option>
+                                        <option value="construction">Construction & Infrastructure</option>
+                                        <option value="industrial">Industrial Manufacturing</option>
+                                        <option value="maintenance">Infrastructure Maintenance</option>
+                                        <option value="specialist">Specialist Applications</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="chemistry-type">Chemistry Type</label>
+                                    <select id="chemistry-type" name="chemistry-type">
+                                        <option value="">Select chemistry type</option>
+                                        <option value="polyurethane">Polyurethane Systems</option>
+                                        <option value="adhesives">Adhesives & Sealants</option>
+                                        <option value="prepolymers">Custom Pre-polymers</option>
+                                        <option value="hybrid">Hybrid Polymers</option>
+                                        <option value="repair">Repair Systems</option>
+                                        <option value="unsure">Not sure</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-details">Project Details *</label>
+                                    <textarea id="project-details" name="project-details" placeholder="Please describe your application requirements, performance criteria, and any specific challenges you're facing..." required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="timeline">Project Timeline</label>
+                                    <select id="timeline" name="timeline">
+                                        <option value="">Select timeline</option>
+                                        <option value="urgent">Urgent (within 4 weeks)</option>
+                                        <option value="standard">Standard (8-12 weeks)</option>
+                                        <option value="extended">Extended (3+ months)</option>
+                                        <option value="planning">Planning stage</option>
+                                    </select>
+                                </div>
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="nda-required" name="nda-required">
+                                    <label for="nda-required">NDA required for this project</label>
+                                </div>
+                                <button type="submit" class="submit-button">Submit Technical Enquiry</button>
+                            </form>
+                        </div>
+
+                        <!-- General Contact Form -->
+                        <div class="form-section">
+                            <h3>General Enquiry</h3>
+                            <p>For general questions, quotes, or information requests</p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="gen-name">Name *</label>
+                                    <input type="text" id="gen-name" name="gen-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gen-company">Company</label>
+                                    <input type="text" id="gen-company" name="gen-company">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="gen-email">Email *</label>
+                                        <input type="email" id="gen-email" name="gen-email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gen-phone">Phone</label>
+                                        <input type="tel" id="gen-phone" name="gen-phone">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="enquiry-type">Enquiry Type *</label>
+                                    <select id="enquiry-type" name="enquiry-type" required>
+                                        <option value="">Select enquiry type</option>
+                                        <option value="quote">Request a Quote</option>
+                                        <option value="info">Product Information</option>
+                                        <option value="partnership">Partnership Opportunity</option>
+                                        <option value="careers">Career Enquiry</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" placeholder="Please provide details about your enquiry..." required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="preferred-contact">Preferred Contact Method</label>
+                                    <select id="preferred-contact" name="preferred-contact">
+                                        <option value="">No preference</option>
+                                        <option value="email">Email</option>
+                                        <option value="phone">Phone</option>
+                                        <option value="either">Either</option>
+                                    </select>
+                                </div>
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">Subscribe to technical updates and news</label>
+                                </div>
+                                <button type="submit" class="submit-button">Send Enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location Section -->
+            <section class="location-section">
+                <div class="container">
+                    <h2 class="section-title">Our Location</h2>
+                    <div class="location-content">
+                        <div class="location-info">
+                            <h3>West Yorkshire Facility</h3>
+                            <p>Our purpose-built facility houses our R&D laboratory, pilot plant, and manufacturing capabilities, providing complete support from concept to commercial production.</p>
+                            <p><strong>Address:</strong><br>
+                            Rosehill Chemicals<br>
+                            Beech Road<br>
+                            Sowerby Bridge<br>
+                            West Yorkshire<br>
+                            United Kingdom<br>
+                            HX6 2JT</p>
+                            <p><strong>Facility Tours:</strong><br>
+                            We welcome technical visits by appointment. Contact us to arrange a tour of our facilities and meet our technical team.</p>
+                        </div>
+                        <div class="location-map">
+                            <p>Interactive map coming soon<br>
+                            Contact us for detailed directions</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Contact -->
+            <section class="team-contact">
+                <div class="container">
+                    <h2 class="section-title">Our Technical Team</h2>
+                    <p class="section-subtitle">
+                        Our experienced team of chemists and engineers are ready to discuss your specific requirements and provide expert guidance.
+                    </p>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <h4>Technical Director</h4>
+                            <div class="role">Polymer Chemistry & Strategy</div>
+                            <p>Leading technical strategy and complex formulation challenges with 25+ years experience in polymer science.</p>
+                        </div>
+                        <div class="team-member">
+                            <h4>Senior Chemist</h4>
+                            <div class="role">Formulation Development</div>
+                            <p>Specialist in polyurethane and hybrid polymer systems with expertise in industrial applications.</p>
+                        </div>
+                        <div class="team-member">
+                            <h4>Applications Engineer</h4>
+                            <div class="role">Technical Support</div>
+                            <p>Providing application guidance and technical support for construction and industrial markets.</p>
+                        </div>
+                        <div class="team-member">
+                            <h4>Process Engineer</h4>
+                            <div class="role">Manufacturing & Scale-up</div>
+                            <p>Ensuring seamless transition from laboratory development to commercial production.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Rosehill Chemicals</strong><br>
+                    Beech Road<br>
+                    Sowerby Bridge<br>
+                    West Yorkshire<br>
+                    United Kingdom<br>
+                    HX6 2JT</p>
+                    <p>📞 +44 (0) 1422 839 610<br>
+                    📧 info@rosehillchemicals.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Capabilities</h3>
+                    <ul>
+                        <li><a href="capabilities.html">Formulation Capabilities</a></li>
+                        <li><a href="capabilities.html#polyurethane">Polyurethane Chemistry</a></li>
+                        <li><a href="capabilities.html#adhesive">Adhesive Technology</a></li>
+                        <li><a href="capabilities.html#hybrid">Hybrid Polymer Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About Rosehill Chemicals</h3>
+                    <p>The industrial formulation division of Rosehill Group, specialising in bespoke polymer solutions for construction and industrial applications with over three decades of expertise.</p>
+                    <p style="margin-top: 20px;">
+                        <strong>Certifications:</strong><br>
+                        ISO 9001 • ISO 14001 • REACH Compliance • UK Manufacturing
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Rosehill Chemicals. Part of Rosehill Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

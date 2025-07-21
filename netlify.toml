@@ -1,0 +1,51 @@
+[build]
+  # No build command needed for static HTML site
+  publish = "."
+
+[build.environment]
+  # Environment settings
+  NODE_VERSION = "18"
+
+[[headers]]
+  # Apply security headers to all pages
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Content Security Policy for enhanced security
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
+
+[[headers]]
+  # Cache static assets for 1 year
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Cache favicon files for 1 week
+  for = "/favicon_io/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  # Set proper MIME type for web manifest
+  for = "/favicon_io/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[redirects]]
+  # Redirect any 404s to index page for SPA-like behavior if needed
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  # Only apply to paths that don't exist as files
+  conditions = {Role = ["admin"], Country = ["US"]}
+  force = false
+
+# Custom 404 page (optional)
+[[redirects]]
+  from = "/404"
+  to = "/index.html"
+  status = 404

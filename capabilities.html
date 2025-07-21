@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulation Capabilities - Rosehill Chemicals</title>
+    <meta name="description" content="Comprehensive formulation capabilities including polyurethane systems, adhesives, sealants, and custom pre-polymers. From laboratory development to commercial production.">
+    <meta name="keywords" content="formulation capabilities, polyurethane chemistry, adhesive development, custom pre-polymers, chemical formulation, R&D laboratory, technical expertise">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #1a365d, #2d4a71);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+        }
+
+        .nav-menu a.active {
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Page Header - Hero Style */
+        .page-header {
+            background: url('images/prepolymer.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(26, 54, 93, 0.2) 0%, 
+                rgba(26, 54, 93, 0.1) 50%,
+                rgba(26, 54, 93, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .page-header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 400px;
+        }
+
+        .page-header-content {
+            max-width: 700px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .page-header h1 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            color: #1A365D;
+        }
+
+        .page-header .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #4A5568;
+            line-height: 1.5;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0 0 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'Overpass', sans-serif;
+            color: #1a365d;
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ff6b35;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Capabilities Grid */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .capability-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-10px);
+        }
+
+
+        .capability-card h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.5rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .capability-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .capability-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .capability-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 25px;
+            font-size: 0.95rem;
+        }
+
+        .capability-features li:last-child {
+            border-bottom: none;
+        }
+
+        .capability-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #FF6B35;
+            font-weight: bold;
+        }
+
+        /* Technical Specifications */
+        .tech-specs {
+            background: #f8f9fa;
+            padding: 60px 0;
+            border-radius: 15px;
+            margin: 60px 0;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .tech-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .spec-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .spec-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #FF6B35;
+            margin-bottom: 10px;
+        }
+
+        .spec-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Quality & Standards */
+        .quality-standards {
+            background: #1a365d;
+            color: white;
+            padding: 60px 0 0 0;
+            margin: 60px 0 0 0;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .quality-standards h2 {
+            color: white;
+        }
+
+        .quality-standards .section-subtitle {
+            color: white;
+        }
+
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .standard-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .standard-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .standard-item h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .standard-item p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin: 0;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button-white {
+            background: white;
+            color: #FF6B35;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+
+        .cta-button-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a365d;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff6b35;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-specs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .standards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tech-specs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .standards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="rosehill_chemicals_logo.png" alt="Rosehill Chemicals" />
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="capabilities.html" class="active">Capabilities</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="process.html">Our Process</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="cta-button">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-container">
+            <div class="page-header-content">
+                <h1>Formulation Capabilities</h1>
+                <p class="subtitle">Comprehensive technical expertise in polymer chemistry, from concept development to commercial production</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Core Capabilities -->
+            <section class="section">
+                <h2 class="section-title">Core Formulation Expertise</h2>
+                <p class="section-subtitle">
+                    Our team of skilled chemists and engineers combine decades of experience with cutting-edge analytical capabilities to develop solutions that meet the most demanding specifications.
+                </p>
+                
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <picture style="width: 100%; height: 120px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; display: block;">
+                            <source srcset="images/polyurethane.avif" type="image/avif">
+                            <source srcset="images/polyurethane.webp" type="image/webp">
+                            <img src="images/polyurethane.jpg" alt="Laboratory polymer filling mould process" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </picture>
+                        <h3>Polyurethane Chemistry</h3>
+                        <p>Advanced formulation of polyurethane systems tailored to specific performance requirements.</p>
+                        <ul class="capability-features">
+                            <li>MDI and TDI-based systems</li>
+                            <li>Low-free monomer formulations</li>
+                            <li>Aliphatic and aromatic chemistries</li>
+                            <li>Moisture-cure and heat-cure systems</li>
+                            <li>Flexible to rigid hardness range</li>
+                            <li>Custom cure profiles and pot life</li>
+                            <li>Catalyst and additive optimisation</li>
+                        </ul>
+                    </div>
+
+                    <div class="capability-card">
+                        <picture style="width: 100%; height: 120px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; display: block;">
+                            <source srcset="images/adhesive.avif" type="image/avif">
+                            <source srcset="images/adhesive.webp" type="image/webp">
+                            <img src="images/adhesive.jpg" alt="Laboratory tensile strength testing for adhesives" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </picture>
+                        <h3>Adhesive Technology</h3>
+                        <p>Structural and semi-structural adhesives for demanding bonding applications.</p>
+                        <ul class="capability-features">
+                            <li>One and two-component systems</li>
+                            <li>Structural bonding adhesives</li>
+                            <li>Flexible sealant formulations</li>
+                            <li>Primer-less adhesion systems</li>
+                            <li>Multi-substrate compatibility</li>
+                            <li>Environmental resistance</li>
+                            <li>Rapid and controlled cure options</li>
+                        </ul>
+                    </div>
+
+                    <div class="capability-card">
+                        <picture style="width: 100%; height: 120px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; display: block;">
+                            <source srcset="images/hybrid.avif" type="image/avif">
+                            <source srcset="images/hybrid.webp" type="image/webp">
+                            <img src="images/hybrid.jpg" alt="Laboratory vessel for hybrid polymer systems" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </picture>
+                        <h3>Hybrid Polymer Systems</h3>
+                        <p>Next-generation chemistry combining the benefits of multiple polymer technologies.</p>
+                        <ul class="capability-features">
+                            <li>Silane-terminated polymers (STP)</li>
+                            <li>MS polymer technology</li>
+                            <li>Polyurethane-silicone hybrids</li>
+                            <li>Epoxy-polyurethane systems</li>
+                            <li>Acrylic-polyurethane blends</li>
+                            <li>Isocyanate-free formulations</li>
+                            <li>Paintable and non-paintable grades</li>
+                        </ul>
+                    </div>
+
+                    <div class="capability-card">
+                        <picture style="width: 100%; height: 120px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; display: block;">
+                            <source srcset="images/prepolymer.avif" type="image/avif">
+                            <source srcset="images/prepolymer.webp" type="image/webp">
+                            <img src="images/prepolymer.jpg" alt="Laboratory demoulding process for custom pre-polymers" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </picture>
+                        <h3>Custom Pre-polymers</h3>
+                        <p>Bespoke reactive intermediates designed for specific customer applications.</p>
+                        <ul class="capability-features">
+                            <li>Controlled molecular weight distribution</li>
+                            <li>Functional end-capping options</li>
+                            <li>Viscosity and handling optimisation</li>
+                            <li>Stability and shelf-life enhancement</li>
+                            <li>Custom functionality incorporation</li>
+                            <li>Batch-to-batch consistency</li>
+                            <li>Scalable production processes</li>
+                        </ul>
+                    </div>
+
+                    <div class="capability-card">
+                        <picture style="width: 100%; height: 120px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; display: block;">
+                            <source srcset="images/repair.avif" type="image/avif">
+                            <source srcset="images/repair.webp" type="image/webp">
+                            <img src="images/repair.jpg" alt="Laboratory abrasion testing for repair systems" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </picture>
+                        <h3>Repair & Maintenance</h3>
+                        <p>Specialised systems for structural repair and infrastructure maintenance.</p>
+                        <ul class="capability-features">
+                            <li>Crack injection systems</li>
+                            <li>Structural strengthening compounds</li>
+                            <li>Concrete bonding agents</li>
+                            <li>Protective coating systems</li>
+                            <li>Weathering and UV resistance</li>
+                            <li>Chemical resistance formulations</li>
+                            <li>Rapid setting emergency repairs</li>
+                        </ul>
+                    </div>
+
+                    <div class="capability-card">
+                        <picture style="width: 100%; height: 120px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; display: block;">
+                            <source srcset="images/sustainable.avif" type="image/avif">
+                            <source srcset="images/sustainable.webp" type="image/webp">
+                            <img src="images/sustainable.jpg" alt="Laboratory testing for sustainable polymer solutions" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </picture>
+                        <h3>Sustainable Solutions</h3>
+                        <p>Environmentally responsible formulations without compromising performance.</p>
+                        <ul class="capability-features">
+                            <li>Low-VOC and VOC-free systems</li>
+                            <li>Bio-based raw material incorporation</li>
+                            <li>Recycled content formulations</li>
+                            <li>Solvent-free reactive systems</li>
+                            <li>Reduced environmental impact</li>
+                            <li>Circular economy principles</li>
+                            <li>REACH compliance assurance</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Specifications -->
+            <section class="tech-specs">
+                <div class="container">
+                    <h2 class="section-title">Technical Capabilities</h2>
+                    <div class="tech-specs-grid">
+                        <div class="spec-item">
+                            <div class="spec-number">35+</div>
+                            <div class="spec-label">Years Experience</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-number">1kg-5T</div>
+                            <div class="spec-label">Batch Size Range</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-number">2-4</div>
+                            <div class="spec-label">Week Development</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-number">20A-80D</div>
+                            <div class="spec-label">Hardness Range</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-number">-40°C to +120°C</div>
+                            <div class="spec-label">Service Temperature</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-number">100%</div>
+                            <div class="spec-label">Confidentiality</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quality & Standards -->
+            <section class="quality-standards">
+                <div class="container">
+                    <h2 class="section-title">Quality & Standards</h2>
+                    <p class="section-subtitle">
+                        All formulations are developed and manufactured to the highest quality standards, ensuring consistency and reliability in every batch.
+                    </p>
+                    <div class="standards-grid">
+                        <div class="standard-item">
+                            <div class="standard-icon">🏆</div>
+                            <h3>ISO 9001</h3>
+                            <p>Quality management system certification ensuring consistent product quality</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🌍</div>
+                            <h3>ISO 14001</h3>
+                            <p>Environmental management system compliance for sustainable operations</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">⚖️</div>
+                            <h3>REACH Compliance</h3>
+                            <p>Full regulatory compliance for European chemical legislation</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🔬</div>
+                            <h3>Testing & Analysis</h3>
+                            <p>Comprehensive analytical capabilities for quality control and development</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🔒</div>
+                            <h3>Confidentiality</h3>
+                            <p>Strict NDAs and IP protection for all customer projects</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🇬🇧</div>
+                            <h3>UK Manufacturing</h3>
+                            <p>All products manufactured at our West Yorkshire facility</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Discuss Your Requirements?</h2>
+            <p>Our technical team is ready to help you develop the perfect solution for your specific needs.</p>
+            <a href="contact.html" class="cta-button-white">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Rosehill Chemicals</strong><br>
+                    Beech Road<br>
+                    Sowerby Bridge<br>
+                    West Yorkshire<br>
+                    United Kingdom<br>
+                    HX6 2JT</p>
+                    <p>📞 +44 (0) 1422 839 610<br>
+                    📧 info@rosehillchemicals.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Capabilities</h3>
+                    <ul>
+                        <li><a href="capabilities.html">Formulation Capabilities</a></li>
+                        <li><a href="capabilities.html#polyurethane">Polyurethane Chemistry</a></li>
+                        <li><a href="capabilities.html#adhesive">Adhesive Technology</a></li>
+                        <li><a href="capabilities.html#hybrid">Hybrid Polymer Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About Rosehill Chemicals</h3>
+                    <p>The industrial formulation division of Rosehill Group, specialising in bespoke polymer solutions for construction and industrial applications with over three decades of expertise.</p>
+                    <p style="margin-top: 20px;">
+                        <strong>Certifications:</strong><br>
+                        ISO 9001 • ISO 14001 • REACH Compliance • UK Manufacturing
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Rosehill Chemicals. Part of Rosehill Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process - Rosehill Chemicals</title>
+    <meta name="description" content="From concept to commercial production - our proven process for developing bespoke polymer formulations. Collaborative development with rapid prototyping and scalable manufacturing.">
+    <meta name="keywords" content="chemical formulation process, bespoke development, polymer chemistry, R&D process, custom formulations, technical development, scale-up, commercial production">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #1a365d, #2d4a71);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+        }
+
+        .nav-menu a.active {
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Page Header - Hero Style */
+        .page-header {
+            background: url('images/adhesive.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(26, 54, 93, 0.2) 0%, 
+                rgba(26, 54, 93, 0.1) 50%,
+                rgba(26, 54, 93, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .page-header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 400px;
+        }
+
+        .page-header-content {
+            max-width: 700px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .page-header h1 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            color: #1A365D;
+        }
+
+        .page-header .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #4A5568;
+            line-height: 1.5;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0 0 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'Overpass', sans-serif;
+            color: #1a365d;
+            font-size: 2.8rem;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ff6b35;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Process Timeline */
+        .process-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #FF6B35, #E55A2B);
+            transform: translateX(-50%);
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .process-step:nth-child(even) .step-content {
+            text-align: right;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            position: relative;
+            z-index: 2;
+            margin: 0 40px;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .step-content {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+
+        .step-content h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.8rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .step-content .step-duration {
+            background: #f8f9fa;
+            color: #FF6B35;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .step-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .step-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+            font-size: 0.95rem;
+        }
+
+        .step-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #FF6B35;
+            font-weight: bold;
+        }
+
+        .process-step:nth-child(even) .step-features li {
+            padding-left: 0;
+            padding-right: 25px;
+        }
+
+        .process-step:nth-child(even) .step-features li::before {
+            left: auto;
+            right: 0;
+        }
+
+        /* Development Phases */
+        .development-phases {
+            background: #f8f9fa;
+            padding: 60px 0;
+            border-radius: 15px;
+            margin: 60px 0;
+        }
+
+        .phases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .phase-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .phase-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .phase-card h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.3rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .phase-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Quality Assurance */
+        .quality-assurance {
+            background: #1a365d;
+            color: white;
+            padding: 60px 0;
+            margin: 60px 0 0 0;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .quality-assurance h2 {
+            color: white;
+        }
+
+        .quality-assurance .section-subtitle {
+            color: white;
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .quality-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .quality-item h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #FF6B35;
+        }
+
+        .quality-item p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin: 0;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .cta-button-large {
+            background: white;
+            color: #FF6B35;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1.2rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a365d;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff6b35;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .process-timeline::before {
+                left: 30px;
+            }
+
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .process-step:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .process-step:nth-child(even) .step-content {
+                text-align: center;
+            }
+
+            .step-number {
+                margin: 0 0 20px 0;
+            }
+
+            .step-content {
+                max-width: 100%;
+            }
+
+            .phases-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quality-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="rosehill_chemicals_logo.png" alt="Rosehill Chemicals" />
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="process.html" class="active">Our Process</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="cta-button">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-container">
+            <div class="page-header-content">
+                <h1>Our Development Process</h1>
+                <p class="subtitle">From concept to commercial production — a proven methodology for developing bespoke polymer solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Introduction -->
+            <section class="section">
+                <p class="section-subtitle">
+                    Our structured approach combines decades of polymer chemistry expertise with modern development methodologies. We work closely with our clients throughout the entire journey, from initial concept through to full commercial production, ensuring every formulation meets exacting performance requirements.
+                </p>
+            </section>
+
+            <!-- Process Timeline -->
+            <section class="section">
+                <h2 class="section-title">Development Journey</h2>
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Initial Consultation</h3>
+                            <div class="step-duration">1-2 weeks</div>
+                            <p>We begin with a detailed technical consultation to understand your specific requirements, performance criteria, and application constraints.</p>
+                            <ul class="step-features">
+                                <li>Comprehensive requirements analysis</li>
+                                <li>Performance specification development</li>
+                                <li>Technical feasibility assessment</li>
+                                <li>Project timeline and cost estimation</li>
+                                <li>Confidentiality agreement execution</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Formulation Development</h3>
+                            <div class="step-duration">2-4 weeks</div>
+                            <p>Our chemists design and synthesise initial formulations, drawing on our extensive library of chemistries and proven approaches.</p>
+                            <ul class="step-features">
+                                <li>Chemistry selection and optimisation</li>
+                                <li>Laboratory-scale synthesis</li>
+                                <li>Initial performance testing</li>
+                                <li>Formulation refinement iterations</li>
+                                <li>Process parameter optimisation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Testing & Validation</h3>
+                            <div class="step-duration">2-3 weeks</div>
+                            <p>Comprehensive testing ensures the formulation meets all performance requirements under real-world conditions.</p>
+                            <ul class="step-features">
+                                <li>Mechanical property testing</li>
+                                <li>Environmental conditioning</li>
+                                <li>Accelerated aging studies</li>
+                                <li>Application-specific testing</li>
+                                <li>Regulatory compliance verification</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Pilot Production</h3>
+                            <div class="step-duration">1-2 weeks</div>
+                            <p>Small-scale production runs validate manufacturing processes and provide material for customer trials.</p>
+                            <ul class="step-features">
+                                <li>Pilot batch manufacturing</li>
+                                <li>Process optimisation</li>
+                                <li>Quality control procedures</li>
+                                <li>Customer trial samples</li>
+                                <li>Application testing support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Scale-up & Production</h3>
+                            <div class="step-duration">2-4 weeks</div>
+                            <p>Seamless transition to full commercial production with comprehensive quality assurance and technical support.</p>
+                            <ul class="step-features">
+                                <li>Production scale optimisation</li>
+                                <li>Quality management systems</li>
+                                <li>Batch consistency validation</li>
+                                <li>Supply chain integration</li>
+                                <li>Ongoing technical support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Development Phases -->
+            <section class="development-phases">
+                <div class="container">
+                    <h2 class="section-title">Technical Development Phases</h2>
+                    <div class="phases-grid">
+                        <div class="phase-card">
+                            <div class="phase-icon">🔬</div>
+                            <h3>Laboratory Development</h3>
+                            <p>Initial chemistry development and small-scale synthesis to prove concept and establish baseline performance characteristics.</p>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-icon">⚗️</div>
+                            <h3>Formulation Optimisation</h3>
+                            <p>Iterative refinement of the formulation to achieve target performance properties and processability requirements.</p>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-icon">🧪</div>
+                            <h3>Performance Validation</h3>
+                            <p>Comprehensive testing programme to validate performance under simulated and real-world conditions.</p>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-icon">🏭</div>
+                            <h3>Manufacturing Scale-up</h3>
+                            <p>Process development and optimisation for commercial production whilst maintaining product quality and consistency.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quality Assurance -->
+            <section class="quality-assurance">
+                <div class="container">
+                    <h2 class="section-title">Quality Assurance Throughout</h2>
+                    <p class="section-subtitle">
+                        Every stage of our development process incorporates rigorous quality controls and testing protocols to ensure consistent, reliable performance.
+                    </p>
+                    <div class="quality-grid">
+                        <div class="quality-item">
+                            <h3>Raw Material Control</h3>
+                            <p>All incoming materials tested to specification with certificates of analysis for every batch used in formulation development.</p>
+                        </div>
+                        <div class="quality-item">
+                            <h3>Process Monitoring</h3>
+                            <p>Real-time monitoring of critical process parameters with statistical process control to ensure batch-to-batch consistency.</p>
+                        </div>
+                        <div class="quality-item">
+                            <h3>Performance Testing</h3>
+                            <p>Comprehensive testing to industry standards including mechanical properties, environmental resistance, and long-term durability.</p>
+                        </div>
+                        <div class="quality-item">
+                            <h3>Documentation</h3>
+                            <p>Complete documentation packages including formulation details, test data, and manufacturing procedures for full traceability.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Start Your Development Project</h2>
+            <p>Ready to begin developing your bespoke polymer solution? Contact our technical team to discuss your requirements and project timeline.</p>
+            <a href="contact.html" class="cta-button-large">Begin Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Rosehill Chemicals</strong><br>
+                    Beech Road<br>
+                    Sowerby Bridge<br>
+                    West Yorkshire<br>
+                    United Kingdom<br>
+                    HX6 2JT</p>
+                    <p>📞 +44 (0) 1422 839 610<br>
+                    📧 info@rosehillchemicals.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Capabilities</h3>
+                    <ul>
+                        <li><a href="capabilities.html">Formulation Capabilities</a></li>
+                        <li><a href="capabilities.html#polyurethane">Polyurethane Chemistry</a></li>
+                        <li><a href="capabilities.html#adhesive">Adhesive Technology</a></li>
+                        <li><a href="capabilities.html#hybrid">Hybrid Polymer Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About Rosehill Chemicals</h3>
+                    <p>The industrial formulation division of Rosehill Group, specialising in bespoke polymer solutions for construction and industrial applications with over three decades of expertise.</p>
+                    <p style="margin-top: 20px;">
+                        <strong>Certifications:</strong><br>
+                        ISO 9001 • ISO 14001 • REACH Compliance • UK Manufacturing
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Rosehill Chemicals. Part of Rosehill Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

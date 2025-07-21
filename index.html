@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosehill Chemicals - Bespoke Polymer Solutions for Construction and Industry</title>
+    <meta name="description" content="Specialists in bespoke polymer formulations. Custom polyurethane systems, adhesives, and reactive resins developed in close collaboration with our clients to solve complex technical challenges.">
+    <meta name="keywords" content="bespoke polymer solutions, custom formulations, polyurethane systems, construction chemicals, industrial adhesives, reactive resins, chemical formulation, UK manufacturing">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #1a365d, #2d4a71);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+        }
+
+        .nav-menu a.active {
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('images/chemicals_hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(26, 54, 93, 0.2) 0%, 
+                rgba(26, 54, 93, 0.1) 50%,
+                rgba(26, 54, 93, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 400px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-content h1 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            color: #1A365D;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #4A5568;
+            line-height: 1.5;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .hero-button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hero-button.primary {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .hero-button.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .hero-button.secondary {
+            background: transparent;
+            color: #1A365D;
+            border: 2px solid #1A365D;
+        }
+
+        .hero-button.secondary:hover {
+            background: #1A365D;
+            color: white;
+        }
+
+        /* Main Content Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .capabilities-section {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-family: 'Overpass', sans-serif;
+            color: #1a365d;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ff6b35;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-intro {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background: white;
+        }
+
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text {
+            padding-right: 20px;
+        }
+
+        .intro-title {
+            font-family: 'Overpass', sans-serif;
+            color: #1a365d;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        .intro-description {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        .intro-tagline {
+            color: #6c757d;
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.6;
+            text-align: left;
+            border-left: 4px solid #FF6B35;
+            padding-left: 20px;
+            margin-top: 30px;
+        }
+
+        .intro-image {
+            padding-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .intro-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .intro-text {
+                padding-right: 0;
+            }
+            
+            .intro-image {
+                padding-left: 0;
+            }
+            
+            .intro-title {
+                font-size: 2rem;
+                text-align: center;
+            }
+            
+            .intro-description,
+            .intro-tagline {
+                text-align: center;
+            }
+            
+            .intro-tagline {
+                border-left: none;
+                border-top: 4px solid #FF6B35;
+                padding-left: 0;
+                padding-top: 20px;
+            }
+        }
+
+        /* Capabilities Grid */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .capability-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .capability-card h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.3rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .capability-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .capability-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .capability-list li:last-child {
+            border-bottom: none;
+        }
+
+        .capability-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #FF6B35;
+            font-weight: bold;
+        }
+
+        /* Applications Section */
+        .applications {
+            background: #f8f9fa;
+        }
+
+        .applications-content {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .application-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .application-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .application-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .application-card h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.2rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        /* Process Section */
+        .process {
+            background: #1a365d;
+            color: white;
+            margin: 0;
+        }
+
+        .process h2 {
+            color: white;
+        }
+
+        .process .section-subtitle {
+            color: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .process-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .process-step h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a365d;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff6b35;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .applications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 60px 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .highlight-button {
+            background: white;
+            color: #FF6B35;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .highlight-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Energy Cross-Reference */
+        .energy-crossref {
+            background: #2d4a71;
+            color: white;
+            padding: 30px 0;
+            margin: 0;
+        }
+
+        .crossref-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .crossref-text h4 {
+            font-family: 'Overpass', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .crossref-text p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .energy-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 12px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .energy-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .crossref-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .hero {
+                padding: 80px 0 60px;
+                min-height: 400px;
+            }
+
+            .hero-container {
+                padding: 0 15px;
+            }
+
+            .hero-content {
+                padding: 30px 20px;
+                margin-right: 0;
+                max-width: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+                margin-bottom: 15px;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-button {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="rosehill_chemicals_logo.png" alt="Rosehill Chemicals" />
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="process.html">Our Process</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="cta-button">Get a Quote</a>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Bespoke Polymer Solutions for Construction and Industry</h1>
+                <p class="subtitle">Tailor-made polyurethane systems, adhesives, and reactive resins — developed in close collaboration with our clients to solve complex technical challenges.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="hero-button primary">Start Your Project</a>
+                    <a href="capabilities.html" class="hero-button secondary">Explore Our Capabilities</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section intro-section">
+        <div class="section-container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2 class="intro-title">Where Complex Chemistry Meets Practical Solutions</h2>
+                    <p class="intro-description">
+                        Rosehill Chemicals is the industrial formulation division of Rosehill Group, specialising in the design and manufacture of custom polymer systems. From pre-polymers and binder technologies to structural adhesives and hybrid sealants, we partner with manufacturers, contractors, and OEMs to develop high-performance materials for construction and industrial applications.
+                    </p>
+                    <p class="intro-tagline">
+                        Whether you're facing a bonding challenge, require unique mechanical properties, or need a reactive system to suit a specific environment, we work with you to create a solution that performs — without compromise.
+                    </p>
+                </div>
+                <div class="intro-image">
+                    <picture>
+                        <source srcset="images/industrial_chemicals.avif" type="image/avif">
+                        <source srcset="images/industrial_chemicals.webp" type="image/webp">
+                        <img src="images/industrial_chemicals.jpg" alt="Industrial Chemical Laboratory" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="section capabilities-section">
+        <div class="section-container">
+            <h2 class="section-title">Tailored Formulation Capabilities</h2>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <h3>Polyurethane Systems</h3>
+                    <ul class="capability-list">
+                        <li>MDI-based and low-free monomer systems</li>
+                        <li>One- and two-component formulations</li>
+                        <li>Custom cure profiles and pot life</li>
+                        <li>Flexible to rigid elastomers</li>
+                        <li>Spray and cast applications</li>
+                    </ul>
+                </div>
+                <div class="capability-card">
+                    <h3>Adhesives & Sealants</h3>
+                    <ul class="capability-list">
+                        <li>Structural bonding systems</li>
+                        <li>Construction joint sealants</li>
+                        <li>Hybrid polymer technologies</li>
+                        <li>Silane-modified systems (STP)</li>
+                        <li>Low-VOC and solvent-free options</li>
+                    </ul>
+                </div>
+                <div class="capability-card">
+                    <h3>Custom Pre-polymers</h3>
+                    <ul class="capability-list">
+                        <li>Bespoke reactive intermediates</li>
+                        <li>Controlled molecular weights</li>
+                        <li>Specialty end-capping</li>
+                        <li>Custom functionality</li>
+                        <li>Scalable from lab to production</li>
+                    </ul>
+                </div>
+                <div class="capability-card">
+                    <h3>Reactive Repair Systems</h3>
+                    <ul class="capability-list">
+                        <li>Structural repair compounds</li>
+                        <li>Crack injection systems</li>
+                        <li>Concrete bonding agents</li>
+                        <li>Protective coatings</li>
+                        <li>Environmental resistance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="section applications">
+        <div class="section-container">
+            <h2 class="section-title">Where Our Materials Perform</h2>
+            <div class="applications-content">
+                <p class="section-subtitle">
+                    Our formulations are used in a wide range of demanding applications — from structural bonding and flooring systems to protective coatings and impact-resistant components. Whether your project requires chemical resistance, UV stability, flexibility, or mechanical strength, we create systems that meet exacting performance standards in real-world conditions.
+                </p>
+            </div>
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="application-icon">🏗️</div>
+                    <h3>Construction & Infrastructure</h3>
+                    <p>Structural adhesives, joint sealants, repair systems, and protective coatings for building and civil engineering projects.</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🏭</div>
+                    <h3>Industrial Manufacturing</h3>
+                    <p>Assembly adhesives, component bonding systems, and specialised elastomers for manufacturing processes.</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🚧</div>
+                    <h3>Infrastructure Maintenance</h3>
+                    <p>Repair compounds, protective coatings, and remedial systems for existing infrastructure and equipment.</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">⚙️</div>
+                    <h3>Specialist Applications</h3>
+                    <p>Custom formulations for unique challenges requiring specific performance characteristics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process">
+        <div class="section-container">
+            <h2 class="section-title">Our Approach</h2>
+            <p class="section-subtitle">
+                From initial consultation to commercial production, we work closely with our clients to develop solutions that exceed expectations.
+            </p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>Understanding your specific requirements and performance criteria</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Formulation</h3>
+                    <p>Developing bespoke chemistry tailored to your application</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Testing</h3>
+                    <p>Rigorous validation and performance verification</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>Scale-up</h3>
+                    <p>Seamless transition from laboratory to commercial production</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">5</div>
+                    <h3>Support</h3>
+                    <p>Ongoing technical support and troubleshooting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="section">
+        <div class="section-container">
+            <h2 class="section-title">Sustainable Chemistry</h2>
+            <p class="section-subtitle">
+                We design for durability and environmental responsibility. Many of our systems use low-VOC chemistries or incorporate recycled content, and all are manufactured at our West Yorkshire facility under ISO-accredited quality and environmental standards.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="highlight-box">
+        <div class="section-container">
+            <h3>Let's Solve Your Next Materials Challenge</h3>
+            <p>Speak directly with our technical team or submit your project requirements via our enquiry form.</p>
+            <a href="contact.html" class="highlight-button">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Energy Cross-Reference -->
+    <section class="energy-crossref">
+        <div class="section-container">
+            <div class="crossref-content">
+                <div class="crossref-text">
+                    <h4>Looking for Oil & Gas Solutions?</h4>
+                    <p>Our specialist materials for energy sector applications are detailed on the Rosehill Energy website.</p>
+                </div>
+                <div class="crossref-button">
+                    <a href="https://energy.rosehill.group/" class="energy-button">Visit Rosehill Energy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Rosehill Chemicals</strong><br>
+                    Beech Road<br>
+                    Sowerby Bridge<br>
+                    West Yorkshire<br>
+                    United Kingdom<br>
+                    HX6 2JT</p>
+                    <p>📞 +44 (0) 1422 839 610<br>
+                    📧 info@rosehillchemicals.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Capabilities</h3>
+                    <ul>
+                        <li><a href="capabilities.html">Formulation Capabilities</a></li>
+                        <li><a href="capabilities.html#polyurethane">Polyurethane Chemistry</a></li>
+                        <li><a href="capabilities.html#adhesive">Adhesive Technology</a></li>
+                        <li><a href="capabilities.html#hybrid">Hybrid Polymer Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About Rosehill Chemicals</h3>
+                    <p>The industrial formulation division of Rosehill Group, specialising in bespoke polymer solutions for construction and industrial applications with over three decades of expertise.</p>
+                    <p style="margin-top: 20px;">
+                        <strong>Certifications:</strong><br>
+                        ISO 9001 • ISO 14001 • REACH Compliance • UK Manufacturing
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Rosehill Chemicals. Part of Rosehill Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
