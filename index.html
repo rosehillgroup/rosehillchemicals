@@ -522,8 +522,8 @@
         }
 
         .application-icon {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             background: linear-gradient(135deg, #FF6B35, #E55A2B);
             border-radius: 50%;
             margin: 0 auto 20px;
@@ -532,6 +532,10 @@
             justify-content: center;
             font-size: 1.5rem;
             color: white;
+        }
+
+        .application-icon img {
+            filter: brightness(0) invert(1);
         }
 
         .application-card h3 {
@@ -649,6 +653,10 @@
 
             .mobile-menu-toggle {
                 display: flex;
+            }
+
+            .cta-button {
+                display: none;
             }
 
             .hero h1 {
@@ -942,22 +950,30 @@
             </div>
             <div class="applications-grid">
                 <div class="application-card">
-                    <div class="application-icon">🏗️</div>
+                    <div class="application-icon">
+                        <img src="images/icons/crane, construction, vehicle, lifting, heavy, machinery, equipment, hoist.svg" alt="Construction icon" style="width: 45px; height: 45px;">
+                    </div>
                     <h3>Construction & Infrastructure</h3>
                     <p>Structural adhesives, joint sealants, repair systems, and protective coatings for building and civil engineering projects.</p>
                 </div>
                 <div class="application-card">
-                    <div class="application-icon">🏭</div>
+                    <div class="application-icon">
+                        <img src="images/icons/factory, industrial, building, production, machinery.svg" alt="Factory icon" style="width: 45px; height: 45px;">
+                    </div>
                     <h3>Industrial Manufacturing</h3>
                     <p>Assembly adhesives, component bonding systems, and specialised elastomers for manufacturing processes.</p>
                 </div>
                 <div class="application-card">
-                    <div class="application-icon">🚧</div>
+                    <div class="application-icon">
+                        <img src="images/icons/predictive maintenance, smart manufacturing, IoT, machine health, fa.svg" alt="Maintenance icon" style="width: 45px; height: 45px;">
+                    </div>
                     <h3>Infrastructure Maintenance</h3>
                     <p>Repair compounds, protective coatings, and remedial systems for existing infrastructure and equipment.</p>
                 </div>
                 <div class="application-card">
-                    <div class="application-icon">⚙️</div>
+                    <div class="application-icon">
+                        <img src="images/icons/connection strength, network, relationships, connection points, unity.svg" alt="Network icon" style="width: 45px; height: 45px;">
+                    </div>
                     <h3>Specialist Applications</h3>
                     <p>Custom formulations for unique challenges requiring specific performance characteristics.</p>
                 </div>

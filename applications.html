@@ -463,8 +463,19 @@
         }
 
         .standard-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .standard-icon img {
+            filter: brightness(0) invert(1);
         }
 
         .standard-item h3 {
@@ -584,6 +595,10 @@
 
             .mobile-menu-toggle {
                 display: flex;
+            }
+
+            .cta-button {
+                display: none;
             }
 
             .page-header h1 {
@@ -787,22 +802,30 @@
                     </p>
                     <div class="standards-grid">
                         <div class="standard-item">
-                            <div class="standard-icon">🔬</div>
+                            <div class="standard-icon">
+                                <img src="images/icons/microscope, lab, science, research, analysis.svg" alt="Microscope icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Testing & Validation</h3>
                             <p>Comprehensive testing to BS, ASTM, and ISO standards including accelerated aging and environmental conditioning</p>
                         </div>
                         <div class="standard-item">
-                            <div class="standard-icon">🛡️</div>
+                            <div class="standard-icon">
+                                <img src="images/icons/riot shield, military, protection, defense, equipment.svg" alt="Shield icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Durability Assurance</h3>
                             <p>Long-term performance prediction through advanced testing protocols and real-world validation</p>
                         </div>
                         <div class="standard-item">
-                            <div class="standard-icon">⚡</div>
+                            <div class="standard-icon">
+                                <img src="images/icons/lightning bolt, energy, electricity, power, flash, thunder, storm, electric.svg" alt="Lightning icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Extreme Conditions</h3>
                             <p>Formulations tested for performance in temperature extremes, UV exposure, and chemical environments</p>
                         </div>
                         <div class="standard-item">
-                            <div class="standard-icon">📊</div>
+                            <div class="standard-icon">
+                                <img src="images/icons/quality control, smart manufacturing, inspection, technology, production.svg" alt="Quality control icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Quality Control</h3>
                             <p>Batch-to-batch consistency ensured through rigorous quality control and statistical process control</p>
                         </div>

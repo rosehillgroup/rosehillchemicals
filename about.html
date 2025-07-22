@@ -412,6 +412,10 @@
             color: white;
         }
 
+        .expertise-icon img {
+            filter: brightness(0) invert(1);
+        }
+
         .expertise-card h3 {
             font-family: 'Overpass', sans-serif;
             font-size: 1.4rem;
@@ -505,9 +509,20 @@
         }
 
         .value-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #FF6B35;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .value-icon img {
+            filter: brightness(0) invert(1);
         }
 
         .value-item h3 {
@@ -632,6 +647,10 @@
                 display: flex;
             }
 
+            .cta-button {
+                display: none;
+            }
+
             .page-header h1 {
                 font-size: 2.2rem;
             }
@@ -738,22 +757,30 @@
                     </p>
                     <div class="expertise-grid">
                         <div class="expertise-card">
-                            <div class="expertise-icon">👨‍🔬</div>
+                            <div class="expertise-icon">
+                                <img src="images/icons/lab coat, science, scientist, laboratory, research.svg" alt="Lab coat icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Senior Chemists</h3>
                             <p>PhD-qualified polymer chemists with extensive experience in polyurethane, epoxy, and hybrid polymer systems. Expert knowledge in reaction mechanisms and formulation chemistry.</p>
                         </div>
                         <div class="expertise-card">
-                            <div class="expertise-icon">⚙️</div>
+                            <div class="expertise-icon">
+                                <img src="images/icons/safety goggles, laboratory, protection, science, experiment.svg" alt="Safety goggles icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Process Engineers</h3>
                             <p>Skilled in scale-up and manufacturing processes, ensuring seamless transition from laboratory development to commercial production whilst maintaining quality.</p>
                         </div>
                         <div class="expertise-card">
-                            <div class="expertise-icon">🧪</div>
+                            <div class="expertise-icon">
+                                <img src="images/icons/research paper, science, study, analysis, document.svg" alt="Research paper icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Analytical Specialists</h3>
                             <p>Advanced analytical capabilities including spectroscopy, thermal analysis, and mechanical testing to validate performance and ensure consistency.</p>
                         </div>
                         <div class="expertise-card">
-                            <div class="expertise-icon">🎯</div>
+                            <div class="expertise-icon">
+                                <img src="images/icons/Lab Flask with Checkmark,lab, experiment, quality, control, test.svg" alt="Flask with checkmark icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Application Experts</h3>
                             <p>Deep understanding of real-world applications and performance requirements across construction, industrial, and specialist markets.</p>
                         </div>
@@ -795,22 +822,30 @@
                     <h2 class="section-title">Our Values</h2>
                     <div class="values-grid">
                         <div class="value-item">
-                            <div class="value-icon">🤝</div>
+                            <div class="value-icon">
+                                <img src="images/icons/connection strength, partnership, unity, bond, problem-solving.svg" alt="Partnership icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Partnership</h3>
                             <p>We work closely with our clients as true partners, understanding their challenges and collaborating to develop optimal solutions.</p>
                         </div>
                         <div class="value-item">
-                            <div class="value-icon">🔬</div>
+                            <div class="value-icon">
+                                <img src="images/icons/lab equipment, science, tools, laboratory, research.svg" alt="Lab equipment icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Innovation</h3>
                             <p>Continuous investment in new technologies and approaches to stay at the forefront of polymer science and formulation chemistry.</p>
                         </div>
                         <div class="value-item">
-                            <div class="value-icon">🏆</div>
+                            <div class="value-icon">
+                                <img src="images/icons/award, trophy, cup, winner, victory.svg" alt="Trophy icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Excellence</h3>
                             <p>Commitment to the highest standards of quality, from raw material sourcing through to final product delivery and ongoing support.</p>
                         </div>
                         <div class="value-item">
-                            <div class="value-icon">🌱</div>
+                            <div class="value-icon">
+                                <img src="images/icons/Organic, Compound, Chemistry, Molecule, Structure.svg" alt="Organic molecule icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Sustainability</h3>
                             <p>Environmental responsibility in our operations and development of sustainable formulations that meet modern environmental standards.</p>
                         </div>

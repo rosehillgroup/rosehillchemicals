@@ -285,7 +285,7 @@
             height: 4px;
             background: #ff6b35;
             position: absolute;
-            bottom: -15px;
+            bottom: -5px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -334,6 +334,10 @@
             color: white;
         }
 
+        .contact-icon img {
+            filter: brightness(0) invert(1);
+        }
+
         .contact-card h3 {
             font-family: 'Overpass', sans-serif;
             font-size: 1.5rem;
@@ -364,10 +368,7 @@
 
         /* Forms Section */
         .forms-section {
-            background: white;
             padding: 60px 0;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin: 60px 0;
         }
 
@@ -378,15 +379,11 @@
             position: relative;
         }
 
-        .forms-container::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, transparent 0%, #e1e5e9 20%, #e1e5e9 80%, transparent 100%);
-            transform: translateX(-50%);
+        .form-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .form-section h3 {
@@ -634,6 +631,10 @@
                 display: flex;
             }
 
+            .cta-button {
+                display: none;
+            }
+
             .page-header h1 {
                 font-size: 2.2rem;
             }
@@ -653,6 +654,13 @@
             .forms-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+
+            .form-section {
+                background: #f8f9fa;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             }
 
             .form-row {
@@ -721,7 +729,9 @@
             <section class="section">
                 <div class="contact-methods">
                     <div class="contact-card">
-                        <div class="contact-icon">📞</div>
+                        <div class="contact-icon">
+                            <img src="images/icons/phone, call, telephone, handset, communication, contact, mobile, device.svg" alt="Phone icon" style="width: 45px; height: 45px;">
+                        </div>
                         <h3>Phone</h3>
                         <p>Speak directly with our technical team for immediate assistance</p>
                         <div class="contact-detail">
@@ -731,7 +741,9 @@
                     </div>
 
                     <div class="contact-card">
-                        <div class="contact-icon">📧</div>
+                        <div class="contact-icon">
+                            <img src="images/icons/email, envelope, mail, message, communication, contact, letter, send.svg" alt="Email icon" style="width: 45px; height: 45px;">
+                        </div>
                         <h3>Email</h3>
                         <p>Technical enquiries and project discussions</p>
                         <div class="contact-detail">
@@ -741,7 +753,9 @@
                     </div>
 
                     <div class="contact-card">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon">
+                            <img src="images/icons/home, address, location, contact, house, residence, place, map.svg" alt="Location icon" style="width: 45px; height: 45px;">
+                        </div>
                         <h3>Visit Us</h3>
                         <p>Our West Yorkshire facility welcomes technical visits</p>
                         <div class="contact-detail">

@@ -451,6 +451,10 @@
             color: white;
         }
 
+        .phase-icon img {
+            filter: brightness(0) invert(1);
+        }
+
         .phase-card h3 {
             font-family: 'Overpass', sans-serif;
             font-size: 1.3rem;
@@ -619,6 +623,10 @@
 
             .mobile-menu-toggle {
                 display: flex;
+            }
+
+            .cta-button {
+                display: none;
             }
 
             .page-header h1 {
@@ -818,22 +826,30 @@
                     <h2 class="section-title">Technical Development Phases</h2>
                     <div class="phases-grid">
                         <div class="phase-card">
-                            <div class="phase-icon">🔬</div>
+                            <div class="phase-icon">
+                                <img src="images/icons/microscope, lab, science, research, analysis.svg" alt="Microscope icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Laboratory Development</h3>
                             <p>Initial chemistry development and small-scale synthesis to prove concept and establish baseline performance characteristics.</p>
                         </div>
                         <div class="phase-card">
-                            <div class="phase-icon">⚗️</div>
+                            <div class="phase-icon">
+                                <img src="images/icons/beaker, laboratory, science, measurement, liquid.svg" alt="Beaker icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Formulation Optimisation</h3>
                             <p>Iterative refinement of the formulation to achieve target performance properties and processability requirements.</p>
                         </div>
                         <div class="phase-card">
-                            <div class="phase-icon">🧪</div>
+                            <div class="phase-icon">
+                                <img src="images/icons/test tube rack, laboratory, science, storage, test tubes.svg" alt="Test tubes icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Performance Validation</h3>
                             <p>Comprehensive testing programme to validate performance under simulated and real-world conditions.</p>
                         </div>
                         <div class="phase-card">
-                            <div class="phase-icon">🏭</div>
+                            <div class="phase-icon">
+                                <img src="images/icons/Science, Play, Electronic, Fun, Kids.svg" alt="Science equipment icon" style="width: 45px; height: 45px;">
+                            </div>
                             <h3>Manufacturing Scale-up</h3>
                             <p>Process development and optimisation for commercial production whilst maintaining product quality and consistency.</p>
                         </div>
