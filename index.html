@@ -15,6 +15,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NVG8DXMB');</script>
+    <!-- End Google Tag Manager -->
     <style>
         * {
             margin: 0;
@@ -819,6 +827,10 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVG8DXMB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header -->
     <header class="header">
         <div class="header-container">
@@ -1127,6 +1139,83 @@
             if (!mobileToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
                 mobileToggle.classList.remove('active');
                 mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Track chemicals product engagement
+        document.addEventListener('click', function(e) {
+            const target = e.target.closest('a');
+            if (!target) return;
+            
+            const href = target.getAttribute('href');
+            if (!href) return;
+            
+            // Track capabilities page access
+            if (href.includes('capabilities.html')) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'engagement',
+                    'engagement_type': 'capabilities_access',
+                    'business_area': 'chemicals',
+                    'capability_focus': href.includes('#') ? href.split('#')[1] : 'general',
+                    'click_text': target.textContent.trim(),
+                    'page_location': window.location.href,
+                    'source_section': target.closest('section')?.className || 'unknown'
+                });
+            }
+            
+            // Track applications page access
+            if (href.includes('applications.html')) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'engagement',
+                    'engagement_type': 'applications_access',
+                    'business_area': 'chemicals',
+                    'click_text': target.textContent.trim(),
+                    'page_location': window.location.href
+                });
+            }
+            
+            // Track process page access
+            if (href.includes('process.html')) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'engagement',
+                    'engagement_type': 'process_access',
+                    'business_area': 'chemicals',
+                    'click_text': target.textContent.trim(),
+                    'page_location': window.location.href
+                });
+            }
+            
+            // Track about page access
+            if (href.includes('about.html')) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'engagement',
+                    'engagement_type': 'about_access',
+                    'business_area': 'chemicals',
+                    'click_text': target.textContent.trim(),
+                    'page_location': window.location.href
+                });
+            }
+            
+            // Track contact/quote requests
+            if (href.includes('contact.html')) {
+                const isQuote = target.textContent.toLowerCase().includes('quote') || 
+                               target.textContent.toLowerCase().includes('project') ||
+                               target.classList.contains('hero-button') ||
+                               target.classList.contains('highlight-button');
+                               
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'engagement',
+                    'engagement_type': isQuote ? 'quote_request' : 'contact_request',
+                    'business_area': 'chemicals',
+                    'click_text': target.textContent.trim(),
+                    'page_location': window.location.href,
+                    'source_section': target.closest('section')?.className || 'unknown'
+                });
             }
         });
     </script>
