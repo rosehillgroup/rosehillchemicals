@@ -36,6 +36,12 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
+[[headers]]
+  # Set proper MIME type for SVG files
+  for = "*.svg"
+  [headers.values]
+    Content-Type = "image/svg+xml"
+
 [[redirects]]
   # Redirect any 404s to index page for SPA-like behavior if needed
   from = "/*"
