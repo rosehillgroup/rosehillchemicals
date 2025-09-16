@@ -1,0 +1,36 @@
+# Netlify Redirects Configuration for Rosehill Chemicals
+# Redirects from rosehillchemicals.com to chemicals.rosehill.group
+
+# Force old domain to new subdomain
+https://rosehillchemicals.com/* https://chemicals.rosehill.group/:splat 301!
+http://rosehillchemicals.com/* https://chemicals.rosehill.group/:splat 301!
+https://www.rosehillchemicals.com/* https://chemicals.rosehill.group/:splat 301!
+http://www.rosehillchemicals.com/* https://chemicals.rosehill.group/:splat 301!
+
+# Force HTTPS on new domain
+http://chemicals.rosehill.group/* https://chemicals.rosehill.group/:splat 301!
+
+# Specific page redirects (maintain SEO for important pages)
+/home /index.html 301
+/about-us.html /about.html 301
+/services.html /capabilities.html 301
+/contact-us.html /contact.html 301
+
+# Clean URLs - remove .html extension
+/about.html /about 301
+/applications.html /applications 301
+/capabilities.html /capabilities 301
+/contact.html /contact 301
+/process.html /process 301
+/index.html / 301
+
+# Serve HTML files without extension
+/about /about.html 200
+/applications /applications.html 200
+/capabilities /capabilities.html 200
+/contact /contact.html 200
+/process /process.html 200
+/thank-you /thank-you.html 200
+
+# Catch-all for orphaned pages - redirect to homepage
+/* /index.html 301
