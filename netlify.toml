@@ -7,6 +7,10 @@
   # Environment settings
   NODE_VERSION = "18"
 
+[[edge_functions]]
+  path = "/*"
+  function = "geo-cookie"
+
 [[headers]]
   # Apply security headers to all pages
   for = "/*"

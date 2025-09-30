@@ -824,6 +824,33 @@
                                 <p class="hidden">
                                     <label>Don't fill this out if you're human: <input name="bot-field-tech" /></label>
                                 </p>
+
+                                <!-- Journey Summary Field -->
+                                <textarea name="journey_summary" hidden></textarea>
+
+                                <!-- Enhanced Journey Tracking Fields -->
+                                <input type="hidden" name="entry_page" id="entry_page_tech">
+                                <input type="hidden" name="pages_visited" id="pages_visited_tech">
+                                <input type="hidden" name="session_duration" id="session_duration_tech">
+                                <input type="hidden" name="page_count" id="page_count_tech">
+                                <input type="hidden" name="ga_client_id" id="ga_client_id_tech">
+
+                                <!-- Geolocation Hidden Fields -->
+                                <input type="hidden" name="geo_country" id="geo_country_tech">
+                                <input type="hidden" name="geo_region" id="geo_region_tech">
+                                <input type="hidden" name="geo_city" id="geo_city_tech">
+                                <input type="hidden" name="geo_lat" id="geo_lat_tech">
+                                <input type="hidden" name="geo_lon" id="geo_lon_tech">
+                                <input type="hidden" name="geo_tz" id="geo_tz_tech">
+
+                                <!-- UTM Tracking Fields -->
+                                <input type="hidden" name="page_url" id="page_url_tech">
+                                <input type="hidden" name="referrer" id="referrer_tech">
+                                <input type="hidden" name="utm_source" id="utm_source_tech">
+                                <input type="hidden" name="utm_medium" id="utm_medium_tech">
+                                <input type="hidden" name="utm_campaign" id="utm_campaign_tech">
+                                <input type="hidden" name="utm_term" id="utm_term_tech">
+                                <input type="hidden" name="utm_content" id="utm_content_tech">
                                 <div class="form-group">
                                     <label for="tech-name">Name *</label>
                                     <input type="text" id="tech-name" name="tech-name" required>
@@ -897,6 +924,33 @@
                                 <p class="hidden">
                                     <label>Don't fill this out if you're human: <input name="bot-field-gen" /></label>
                                 </p>
+
+                                <!-- Journey Summary Field -->
+                                <textarea name="journey_summary" hidden></textarea>
+
+                                <!-- Enhanced Journey Tracking Fields -->
+                                <input type="hidden" name="entry_page" id="entry_page_gen">
+                                <input type="hidden" name="pages_visited" id="pages_visited_gen">
+                                <input type="hidden" name="session_duration" id="session_duration_gen">
+                                <input type="hidden" name="page_count" id="page_count_gen">
+                                <input type="hidden" name="ga_client_id" id="ga_client_id_gen">
+
+                                <!-- Geolocation Hidden Fields -->
+                                <input type="hidden" name="geo_country" id="geo_country_gen">
+                                <input type="hidden" name="geo_region" id="geo_region_gen">
+                                <input type="hidden" name="geo_city" id="geo_city_gen">
+                                <input type="hidden" name="geo_lat" id="geo_lat_gen">
+                                <input type="hidden" name="geo_lon" id="geo_lon_gen">
+                                <input type="hidden" name="geo_tz" id="geo_tz_gen">
+
+                                <!-- UTM Tracking Fields -->
+                                <input type="hidden" name="page_url" id="page_url_gen">
+                                <input type="hidden" name="referrer" id="referrer_gen">
+                                <input type="hidden" name="utm_source" id="utm_source_gen">
+                                <input type="hidden" name="utm_medium" id="utm_medium_gen">
+                                <input type="hidden" name="utm_campaign" id="utm_campaign_gen">
+                                <input type="hidden" name="utm_term" id="utm_term_gen">
+                                <input type="hidden" name="utm_content" id="utm_content_gen">
                                 <div class="form-group">
                                     <label for="gen-name">Name *</label>
                                     <input type="text" id="gen-name" name="gen-name" required>
@@ -1270,5 +1324,193 @@
 
     <!-- Google Maps JavaScript API -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+
+    <!-- Geolocation and Form Enhancement Script -->
+    <script>
+    (function () {
+        // 1) Fill URL & referrer for all forms
+        const fillBasicFields = (suffix) => {
+            const pageUrlField = document.getElementById('page_url' + suffix);
+            const referrerField = document.getElementById('referrer' + suffix);
+            if (pageUrlField) pageUrlField.value = location.href;
+            if (referrerField) referrerField.value = document.referrer || '';
+        };
+
+        // 2) Parse UTM parameters for all forms
+        const fillUTMFields = (suffix) => {
+            const p = new URLSearchParams(location.search);
+            const utm = k => p.get(k) || '';
+            ['source','medium','campaign','term','content'].forEach(k => {
+                const el = document.getElementById('utm_' + k + suffix);
+                if (el) el.value = utm('utm_' + k);
+            });
+        };
+
+        // 3) Read edge geo cookie for all forms
+        const fillGeoFields = (suffix) => {
+            const m = document.cookie.match(/(?:^|;\s*)nl_geo=([^;]+)/);
+            if (m) {
+                try {
+                    const geo = JSON.parse(decodeURIComponent(m[1]));
+                    const setGeoField = (id, value) => {
+                        const field = document.getElementById(id + suffix);
+                        if (field) field.value = value || '';
+                    };
+                    setGeoField('geo_country', geo.country);
+                    setGeoField('geo_region', geo.region);
+                    setGeoField('geo_city', geo.city);
+                    setGeoField('geo_lat', geo.latitude ? String(geo.latitude) : '');
+                    setGeoField('geo_lon', geo.longitude ? String(geo.longitude) : '');
+                    setGeoField('geo_tz', geo.timezone);
+                } catch (e) {
+                    console.log('Error parsing geo cookie:', e);
+                }
+            }
+        };
+
+        // Apply to both forms
+        ['_tech', '_gen'].forEach(suffix => {
+            fillBasicFields(suffix);
+            fillUTMFields(suffix);
+            fillGeoFields(suffix);
+        });
+    })();
+    </script>
+
+    <!-- Enhanced Journey Tracking Script -->
+    <script>
+        (function () {
+            const MAX_STEPS = 20;
+            const SESSION_KEY = 'rh_sess';
+
+            // Initialize or load session
+            const now = Date.now();
+            const sess = JSON.parse(sessionStorage.getItem(SESSION_KEY) || '{}');
+
+            // Track session start
+            if (!sess.started_at) {
+                sess.started_at = now;
+                sess.first_page = location.pathname;
+                sess.referrer = document.referrer || 'direct';
+                sess.landing_params = location.search;
+            }
+
+            // Track page visits with timing
+            sess.steps = sess.steps || [];
+            const lastStep = sess.steps[sess.steps.length - 1];
+
+            if (!lastStep || lastStep.path !== location.pathname) {
+                // Calculate time on previous page
+                if (lastStep) {
+                    lastStep.duration = now - lastStep.ts;
+                }
+
+                sess.steps.push({
+                    path: location.pathname,
+                    ts: now,
+                    duration: 0
+                });
+                sess.steps = sess.steps.slice(-MAX_STEPS);
+            }
+
+            sessionStorage.setItem(SESSION_KEY, JSON.stringify(sess));
+
+            // Get GA Client ID if available
+            function getGAClientId() {
+                const ga = document.cookie.match(/_ga=GA\d\.\d\.(\d+\.\d+)/);
+                return ga ? ga[1] : '';
+            }
+
+            // Build comprehensive journey summary
+            function buildJourneySummary() {
+                const s = JSON.parse(sessionStorage.getItem(SESSION_KEY) || '{}');
+                const totalTime = Math.round((Date.now() - (s.started_at || Date.now())) / 1000);
+                const timeFormatted = totalTime < 60 ? `${totalTime}s` : `${Math.floor(totalTime/60)}m ${totalTime%60}s`;
+
+                // Update duration for current page
+                if (s.steps && s.steps.length > 0) {
+                    const currentStep = s.steps[s.steps.length - 1];
+                    currentStep.duration = Date.now() - currentStep.ts;
+                }
+
+                // Format page path with timing
+                const pathsWithTime = (s.steps || []).map(step => {
+                    const dur = step.duration ? ` (${Math.round(step.duration/1000)}s)` : '';
+                    return step.path + dur;
+                }).join(' > ');
+
+                return {
+                    entry_page: s.first_page || '/',
+                    referrer: s.referrer || 'direct',
+                    pages_visited: (s.steps || []).map(x => x.path).join(' > '),
+                    pages_with_timing: pathsWithTime,
+                    session_duration: timeFormatted,
+                    page_count: (s.steps || []).length,
+                    ga_client_id: getGAClientId(),
+                    language: document.documentElement.lang || 'en'
+                };
+            }
+
+            // Wire up forms
+            function wireForm(form, suffix) {
+                if (form.__journeyWired) return;
+                form.__journeyWired = true;
+
+                // Keep fields updated
+                const updateFields = () => {
+                    const journey = buildJourneySummary();
+
+                    // Populate journey summary for backwards compatibility
+                    const summaryField = form.querySelector('[name="journey_summary"]');
+                    if (summaryField) {
+                        summaryField.value = [
+                            `Entry: ${journey.entry_page}`,
+                            `Referrer: ${journey.referrer}`,
+                            `Trail: ${journey.pages_with_timing}`,
+                            `Time on site: ${journey.session_duration}`,
+                            `Pages viewed: ${journey.page_count}`,
+                            `GA ID: ${journey.ga_client_id || 'not available'}`,
+                            `Language: ${journey.language}`
+                        ].join('\n');
+                    }
+
+                    // Individual fields for easier processing
+                    Object.entries(journey).forEach(([key, value]) => {
+                        const field = document.getElementById(key + suffix);
+                        if (field && key !== 'pages_with_timing') {
+                            field.value = String(value);
+                        }
+                    });
+                };
+
+                // Update immediately and periodically
+                updateFields();
+                const iv = setInterval(updateFields, 500);
+
+                // Update fields before submission
+                form.addEventListener('submit', function(e) {
+                    clearInterval(iv);
+                    updateFields(); // Final update
+                }, { capture: true });
+            }
+
+            // Initialize on DOM ready
+            function init() {
+                // Wire technical consultation form
+                const techForm = document.querySelector('form[name="technical-consultation"]');
+                if (techForm) wireForm(techForm, '_tech');
+
+                // Wire general enquiry form
+                const genForm = document.querySelector('form[name="general-enquiry"]');
+                if (genForm) wireForm(genForm, '_gen');
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
 </body>
 </html>
