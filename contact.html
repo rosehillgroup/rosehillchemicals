@@ -724,6 +724,7 @@
 
         /* Leaflet Map Styling */
         #map {
+            width: 100%;
             height: 420px;
             border-radius: 15px;
         }
@@ -1206,6 +1207,9 @@
     <script>
         // Initialize Leaflet Map with OpenStreetMap
         function initLeaflet(title, centre) {
+            const el = document.getElementById('map');
+            if (!el) return;
+
             const run = () => {
                 const map = L.map('map', { scrollWheelZoom: false }).setView(centre, 15);
 
@@ -1240,10 +1244,18 @@
                         </p>
                     </div>
                 `).openPopup();
-            };
 
-            const el = document.getElementById('map');
-            if (!el) return;
+                // Key bit: make Leaflet re-measure once layout settles
+                setTimeout(() => map.invalidateSize(), 0);
+
+                // Keep it correct on container size changes
+                if ('ResizeObserver' in window) {
+                    const ro = new ResizeObserver(() => map.invalidateSize());
+                    ro.observe(el);
+                } else {
+                    window.addEventListener('resize', () => map.invalidateSize());
+                }
+            };
 
             // Lazy load when map scrolls into view
             if ('IntersectionObserver' in window) {
