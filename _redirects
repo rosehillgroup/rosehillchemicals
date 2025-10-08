@@ -22,6 +22,7 @@ http://chemicals.rosehill.group/* https://chemicals.rosehill.group/:splat 301!
 /capabilities.html /capabilities 301
 /contact.html /contact 301
 /process.html /process 301
+/thank-you.html /thank-you 301
 /index.html / 301
 
 # Serve HTML files without extension
@@ -32,5 +33,5 @@ http://chemicals.rosehill.group/* https://chemicals.rosehill.group/:splat 301!
 /process /process.html 200
 /thank-you /thank-you.html 200
 
-# Catch-all for orphaned pages - redirect to homepage
-/* /index.html 301
+# Fallback for 404 errors
+/* /404.html 404
