@@ -46,17 +46,8 @@
   [headers.values]
     Content-Type = "image/svg+xml"
 
+# Custom 404 page
 [[redirects]]
-  # Redirect any 404s to index page for SPA-like behavior if needed
   from = "/*"
-  to = "/index.html"
-  status = 200
-  # Only apply to paths that don't exist as files
-  conditions = {Role = ["admin"], Country = ["US"]}
-  force = false
-
-# Custom 404 page (optional)
-[[redirects]]
-  from = "/404"
-  to = "/index.html"
+  to = "/404.html"
   status = 404
